@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">anycpu</Platform>
+    <ProjectGuid>{989C213E-8EC1-4B37-ADBC-8F3AFA9CAA8F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>DWSIM.Automation.Test.macOS</RootNamespace>
+    <AssemblyName>DWSIM.Automation.Test.macOS</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|anycpu' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|anycpu' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="DWSIM.Automation">
+      <HintPath>..\..\..\Desktop\DWSIM.app\Contents\MonoBundle\DWSIM.Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="DWSIM.Interfaces">
+      <HintPath>..\..\..\Desktop\DWSIM.app\Contents\MonoBundle\DWSIM.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="CapeOpen">
+      <HintPath>..\..\..\Desktop\DWSIM.app\Contents\MonoBundle\CapeOpen.dll</HintPath>
+    </Reference>
+    <Reference Include="DWSIM.Thermodynamics">
+      <HintPath>..\..\..\Desktop\DWSIM.app\Contents\MonoBundle\DWSIM.Thermodynamics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="DWSIM.UI.Forms">
+      <HintPath>..\..\..\Desktop\DWSIM.app\Contents\MonoBundle\DWSIM.UI.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="DWSIM.UnitOperations">
+      <HintPath>..\..\..\Desktop\DWSIM.app\Contents\MonoBundle\DWSIM.UnitOperations.dll</HintPath>
+    </Reference>
+    <Reference Include="DWSIM.SharedClasses">
+      <HintPath>..\..\..\Desktop\DWSIM.app\Contents\MonoBundle\DWSIM.SharedClasses.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
